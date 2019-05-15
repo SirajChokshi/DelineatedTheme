@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Info -->
+  <title>Portfolio Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Oswald" rel="stylesheet">
+  <!-- Theme Scripts -->
+  <script src="assets/js/lightbox.js"></script>
+</head>
+
+<body id="wrapper">
+<header>
+  <a href="index.html" style="color: black; text-decoration: none;"><h1>
+    <!-- Write the artist's name below here -->
+      Name Here
+    <!---------------------------------------->
+  </h1></a>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Work</a> / </li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="row">
+    <div class="col">
+      <img src="assets/images/1.jpg" alt="" class="content" onclick="openTo(1)">
+      <img src="assets/images/5.jpg" alt="" class="content" onclick="openTo(5)">
+      <img src="assets/images/9.jpg" alt="" class="content" onclick="openTo(9)">
+      <img src="assets/images/13.jpg" alt="" class="content" onclick="openTo(13)">
+    </div>
+    <div class="col">
+      <img src="assets/images/2.jpg" alt="" class="content" onclick="openTo(2)">
+      <img src="assets/images/6.jpg" alt="" class="content" onclick="openTo(6)">
+      <img src="assets/images/10.jpg" alt="" class="content" onclick="openTo(10)">
+      <img src="assets/images/14.jpg" alt="" class="content" onclick="openTo(14)">
+    </div>
+    <div class="col">
+      <img src="assets/images/3.jpg" alt="" class="content" onclick="openTo(3)">
+      <img src="assets/images/7.jpg" alt="" class="content" onclick="openTo(7)">
+      <img src="assets/images/11.jpg" alt="" class="content" onclick="openTo(11)">
+      <img src="assets/images/15.jpg" alt="" class="content" onclick="openTo(15)">
+    </div>
+    <div class="col">
+      <img src="assets/images/4.jpg" alt="" class="content" onclick="openTo(4)">
+      <img src="assets/images/8.jpg" alt="" class="content" onclick="openTo(8)">
+      <img src="assets/images/12.jpg" alt="" class="content" onclick="openTo(12)">
+      <img src="assets/images/16.jpg" alt="" class="content" onclick="openTo(16)">
+    </div>
+  </div>
+</main>
+
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Work</a> / </li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <br>
+  <p>Copyright &copy; <span id="year"></span> Name Here. All Rights Reserved. <span id="credit">Theme by <a href="https://credit.sirajchokshi.com" target="_blank">Siraj Chokshi</a>.</span></p>
+</footer>
+
+</body>
+
+<div id="lightbox">
+  <span class="close cursor" onclick="quit()">&#10005;</span>
+  <div class="gallery">
+    <div id="photoNumber" class="photoNumber">null</div>
+    <div class="slide">
+      <img src="assets/images/1.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/2.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/3.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/4.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/5.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/6.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/7.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/8.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/9.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/10.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/11.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/12.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/13.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/14.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/15.jpg">
+    </div>
+    <div class="slide">
+      <img src="assets/images/16.jpg">
+    </div>
+
+    <a class="prev" onclick="prevSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+
+<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+</html>

@@ -1,0 +1,396 @@
+/*
+Author: Siraj Chokshi
+Description: HTML/CSS Portfolio Template
+*/
+
+:root {
+  --theme-color: #DC143C;
+  /*
+   * Change the theme color to any color you want
+   * NOTE: Colors that are distinct from both black and white work best;
+   * Ex. use orange instead of yellow, or blue instead of navy
+   */
+}
+
+body, * {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-left: 16px;
+}
+
+h1, h2 {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 42px;
+  opacity: 0.7;
+}
+
+header h1 {
+  margin: 40px 0 0 0;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li, nav ul li a {
+  font-size: 28px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+nav ul li a {
+  color: #000;
+  opacity: 0.5;
+  -webkit-transition: all 0.2s;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+nav ul li a.active {
+  opacity: 1;
+  color: var(--theme-color);
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 29px;
+}
+
+footer {
+  margin: 40px 0 40px 16px;
+}
+
+footer p {
+  font-size: 24px;
+}
+
+#credit {
+  color: #999;
+}
+
+#credit a, #credit:visited {
+  color: inherit;
+  -webkit-transition: color 0.2s;
+}
+
+#credit a:hover {
+  color: black;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#masthead {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--theme-color);
+  min-height: 100vh;
+  width: 100%;
+}
+
+#halftone {
+	background: url('../checkerboard.svg'), url('../images/1.jpg');
+	background-size: 4px 4px, cover;
+	background-repeat: repeat, no-repeat;
+	filter: grayscale(1);
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 83% 0, 64% 100%, 0 100%);
+  clip-path: polygon(0 0, 83% 0, 64% 100%, 0 100%);
+  transition: filter 1.3s ease;
+}
+
+#halftone:hover {
+	filter: none;
+}
+
+#intro {
+  margin-top: 34vh;
+  width: 41%;
+  position: absolute;
+  right: 4%;
+}
+
+#intro h1 {
+  color: white;
+}
+
+#intro p {
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+#intro a {
+  padding: 7.5px 50px 11px 50px;
+  margin-right: 7px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#intro a.primary {
+  background-color: white;
+  color: var(--theme-color);
+}
+
+#intro a.secondary {
+  color: white;
+  -webkit-box-shadow:inset 0px 0px 0px 3.5px white;
+  -moz-box-shadow:inset 0px 0px 0px 3.5px white;
+  box-shadow:inset 0px 0px 0px 3.5px white;
+}
+
+#intro a:hover {
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+#about {
+  margin-top: 24px;
+  margin-left: 16px;
+}
+
+#about .abt-text {
+  line-height: 2;
+  float: left;
+  width: 52%;
+  margin-top: 0;
+}
+
+#about img {
+  float: right;
+  width: 42%;
+  margin-right: 3.5%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+
+.col {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 8px;
+}
+
+.col img.content {
+  margin-top: 16px;
+  vertical-align: middle;
+  width: 100% !important;
+  cursor: pointer;
+}
+
+#lightbox, .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  text-align: center;
+}
+
+.gallery {
+  position: relative;
+  display: inline-block;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  height: 70vh;
+  width: auto;
+  text-align: left;
+}
+
+.gallery img {
+  height: 70vh;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slide {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#photoNumber, .photoNumber {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row .col input {
+  display: inherit;
+}
+
+@media screen and (max-width: 1340px) {
+  .col {
+    flex: 50%;
+    max-width: 50%;
+  }
+  #wrapper {
+    width: 90%;
+  }
+  #intro {
+    margin-top: 10%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  #intro {
+    position: relative;
+    display: block;
+    width: 80vw;
+    height: auto;
+    margin-left: 13.5vw;
+    margin-top: 3em;
+    padding: 0;
+    padding-bottom: 3em;
+  }
+  #halftone {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 55vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+  }
+
+  #about .abt-text {
+    line-height: 2;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #about img {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 24px;
+  }
+
+  .modal-content img {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .modal-content {
+    height: auto;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .col {
+    flex: 100%;
+    max-width: 100%;
+  }
+  #about {
+    margin-right: 20px;
+  }
+
+  #about p {
+    font-size: 24px;
+  }
+
+  #wrapper {
+    width: 98%;
+  }
+  #intro a {
+    display: block;
+    width: 100%;
+  }
+  #intro a:hover {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}

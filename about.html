@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Info -->
+  <title>Portfolio Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Oswald" rel="stylesheet">
+</head>
+
+<body id="wrapper">
+<header>
+  <a href="index.html" style="color: black; text-decoration: none;"><h1>
+    <!-- Write the artist's name below here -->
+      Name Here
+    <!---------------------------------------->
+  </h1></a>
+  <nav>
+    <ul>
+      <li><a href="work.html">Work</a> / </li>
+      <li><a href="#" class="active">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="about">
+  <div class="abt-text">
+    <h2>About the Artist</h2>
+    <p>
+      <!-- Write the artist's biography here -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <!--------------------------------------->
+    </p>
+  </div>
+  <img src="assets/images/author.jpg" alt="">
+</main>
+
+<div style="clear: both;"></div>
+
+<footer>
+  <nav>
+    <ul>
+      <li><a href="work.html">Work</a> / </li>
+      <li><a href="#" class="active">About</a></li>
+    </ul>
+  </nav>
+  <br>
+  <p>Copyright &copy; <span id="year"></span> Name Here. All Rights Reserved. <span id="credit">Theme by <a href="https://credit.sirajchokshi.com" target="_blank">Siraj Chokshi</a>.</span></p>
+</footer>
+
+</body>
+
+<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+
+</html>

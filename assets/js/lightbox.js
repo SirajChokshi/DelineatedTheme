@@ -3,7 +3,7 @@
  * NOTE: var slideIndex should start at 1 and finish at the
  * size of the lightbox. slideIndex should NEVER == 0.
  *
- * @author Siraj Chokshi
+ * @author Siraj Chokshi <sirajsc2@illinois.edu>
  */
 
 // read keystrokes for extra functionality
